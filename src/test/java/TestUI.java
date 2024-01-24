@@ -1,6 +1,8 @@
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
 
+import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class TestUI {
@@ -10,6 +12,7 @@ public class TestUI {
     void testOpenMainPage() {
 
         open("https://xn--80afcdbalict6afooklqi5o.xn--p1ai/identity/account/login");
+        $(By.xpath("//button['loginBtn']")).click();
 
     }
 }
